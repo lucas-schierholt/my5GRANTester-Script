@@ -22,7 +22,7 @@ Script to run my5G-RANTester
       ```
 
       ```bash
-      bash <(curl -s https://raw.githubusercontent.com/lucas-schierholt/my5GRANTester-Script/main/run.sh) -c 2
+      bash <(curl -s https://raw.githubusercontent.com/lucas-schierholt/my5GRANTester-Script/main/run.sh) -c 1
       ```
 
       
