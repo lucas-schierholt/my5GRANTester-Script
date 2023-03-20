@@ -99,12 +99,12 @@ fill_core_database() {
     print "Adding necessary information to Open5GS database..."
 
     if [ ! -d "my5G-RANTester-Database-Filler" ]; then
-        git clone --recurse-submodules https://github.com/gabriel-lando/my5G-RANTester-Open5GS-Database-Filler my5G-RANTester-Database-Filler
+        git clone --recurse-submodules https://github.com/lucas-schierholt/my5GRANTester-Open5gs-DatabaseFiller-Script.git my5G-RANTester-Database-Filler
     fi
 
     cd my5G-RANTester-Database-Filler/
 
-    wget https://raw.githubusercontent.com/gabriel-lando/open5gs-my5G-RANTester-docker/main/config/tester.yaml -O ./data/config.yaml
+    #wget https://raw.githubusercontent.com/gabriel-lando/open5gs-my5G-RANTester-docker/main/config/tester.yaml -O ./data/config.yaml
 
     # Generate .env file with the configs for docker compose
     echo NUM_DEVICES=$@ > .env

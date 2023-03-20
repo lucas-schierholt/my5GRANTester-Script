@@ -97,16 +97,16 @@ else
 fi
 
 ### Check Kernel version first
-#source <(curl -s https://raw.githubusercontent.com/gabriel-lando/my5G-RANTester-Scripts/throughput-test/utils/dependencies/kernel_version.sh)
-#check_kernel_version
+source <(curl -s https://raw.githubusercontent.com/gabriel-lando/my5G-RANTester-Scripts/throughput-test/utils/dependencies/kernel_version.sh)
+check_kernel_version
 
 ### Install APT dependencies
-#print "Checking and installing dependencies..."
-#apt update 
-#apt -y install git ca-certificates curl gnupg pass gnupg2 lsb-release make build-essential
+print "Checking and installing dependencies..."
+apt update 
+apt -y install git ca-certificates curl gnupg pass gnupg2 lsb-release make build-essential
 
 ### Install Docker
-#source <(curl -s https://raw.githubusercontent.com/gabriel-lando/my5G-RANTester-Scripts/throughput-test/utils/dependencies/docker.sh)
+#so/urce <(curl -s https://raw.githubusercontent.com/gabriel-lando/my5G-RANTester-Scripts/throughput-test/utils/dependencies/docker.sh)
 #install_docker
 
 ### Install Core specific dependencies
@@ -120,7 +120,9 @@ fi
 #run_core
 
 ### Fill core database with IMSI info
-#fill_core_database $RUN_NUM_UEs
+fill_core_database $RUN_NUM_UEs
+
+## Alterar os IP`s do arquivo de configuracao config.yaml 0.0.0.0
 
 ### Create my5G-RANTester container
 #print "Creating my5G-RANTester container, it can take a while..."
