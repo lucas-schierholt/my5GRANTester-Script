@@ -109,8 +109,9 @@ fill_core_database() {
     # Generate .env file with the configs for docker compose
     echo NUM_DEVICES=$@ > .env
 
-    docker compose up --build
-    docker compose down --rmi all -v --remove-orphans
+    kubectl apply -f db-filler.yaml
+    #docker compose up --build
+    #docker compose down --rmi all -v --remove-orphans
     cd $CORE_WORK_DIR
 }
 
